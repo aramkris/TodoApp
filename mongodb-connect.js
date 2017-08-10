@@ -1,6 +1,6 @@
 'use strict';
 
-const {MongoClient} = require('mongodb');
+const {MongoClient, ObjectID} = require('mongodb');
 
 MongoClient.connect('mongodb://localhost:27017/TodoApp', (err,db) => {
   if (err) {
@@ -31,6 +31,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err,db) => {
     console.log("Some issue with retrieving documents", err);
   });
 
-  db.close();
+  
+  //db.close();
 
 });
